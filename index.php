@@ -24,7 +24,9 @@
         <div class="row">
             <div class="col">
                 <ul class="list-group">
-                    <li class="list-group-item"></li>
+                    <li class="list-group-item" v-for="todo in todoList">
+                        {{ todo.text }}
+                    </li>
                 </ul>
             </div>
         </div>
