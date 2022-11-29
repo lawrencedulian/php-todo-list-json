@@ -18,19 +18,24 @@
 </head>
 
 <body>
-    <main id="app"></main>
-    <div class="container">
-        <h1>Todo List</h1>
-        <div class="row">
-            <div class="col">
-                <ul class="list-group">
-                    <li class="list-group-item" v-for="todo in todoList">
-                        {{ todo.text }}
-                    </li>
-                </ul>
+    <main id="app">
+        <div class="container">
+            <h1>Todo List</h1>
+            <div class="row">
+                <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item" v-for="todo in todoList">
+                            {{ todo.text }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <input class="form-control" type="text" placeholder="Inserisci un nuovo todo" aria-label="Inserisci un nuovo todo" v-model="newTodo">
+                <button class="btn btn-primary mt-2" @click="addTodo">Salva</button>
             </div>
         </div>
-    </div>
+    </main>
     <script src="js/script.js"></script>
 </body>
 
