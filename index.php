@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col">
                     <ul class="list-group">
-                        <li class="list-group-item" v-for="todo in todoList">
+                        <li class="list-group-item" v-for="todo in todoList" :class="{'text-decoration-line-through' : todo.done}">
                             {{ todo.text }}
                         </li>
                     </ul>
